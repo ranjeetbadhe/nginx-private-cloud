@@ -11,7 +11,7 @@ spec:
     app: nginx-ranjeet
   ports:
     - name: http
-      port: 80          # Service port
-      targetPort: 80    # Container port
-      nodePort: 30080   # NodePort (must be in 30000-32767 range)
+      port: 80
+      targetPort: 80
+      nodePort: 30080
 

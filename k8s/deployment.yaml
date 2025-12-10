@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: image: image-registry.openshift-image-registry.svc:5000/nginx-demo/nginx-ranjeet:latest
+          image: image-registry.openshift-image-registry.svc:5000/nginx-demo/nginx-ranjeet:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
