@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: default-route-openshift-image-registry.apps.elephant.zoo.local/nginx-demo/nginx-ranjeet:latest
+          image: image: image-registry.openshift-image-registry.svc:5000/nginx-demo/nginx-ranjeet:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
