@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-ranjeet
+  namespace: nginx-demo
+  labels:
+    app: nginx-ranjeet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-ranjeet
+  template:
+    metadata:
+      labels:
+        app: nginx-ranjeet
+    spec:
+      containers:
+        - name: nginx
+          image: default-route-openshift-image-registry.apps.elephant.zoo.local/nginx-demo/nginx-ranjeet:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 15
+            periodSeconds: 20
+
