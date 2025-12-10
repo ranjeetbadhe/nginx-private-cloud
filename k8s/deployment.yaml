@@ -15,9 +15,6 @@ spec:
       labels:
         app: nginx-ranjeet
     spec:
-      securityContext:
-        runAsNonRoot: true
-        fsGroup: 0
       containers:
         - name: nginx
           image: image-registry.openshift-image-registry.svc:5000/nginx-demo/nginx-ranjeet:latest
