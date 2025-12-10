@@ -11,7 +11,7 @@ spec:
     app: nginx-ranjeet
   ports:
     - name: http
-      port: 80          # service port
+      port: 80          # service port (client visible)
       targetPort: 8080  # container port
       nodePort: 30080   # NodePort
 
